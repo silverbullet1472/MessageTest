@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+android:id="@+id/item_like"
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:card_view="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_gravity="center"
+android:layout_marginLeft="5dp"
+android:layout_marginRight="5dp"
+android:foreground="?android:attr/selectableItemBackground"
+card_view:cardBackgroundColor="@android:color/white"
+card_view:cardCornerRadius="4dp"
+card_view:cardElevation="2dp"
+card_view:cardUseCompatPadding="true">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/img_sender"
+            android:layout_width="60dp"
+            android:layout_height="48dp"
+            android:src="@drawable/list_image"/>
+
+        <TextView
+            android:id="@+id/tv_sender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/img_sender"
+            android:textSize="18sp"
+            android:text="ici"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_sender"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/img_sender"
+            android:textSize="14sp"
+            android:text="恭喜你又获得10积分"
+            android:textColor="@color/colorPrimary"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
