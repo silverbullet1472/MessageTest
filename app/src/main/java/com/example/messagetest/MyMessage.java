@@ -7,11 +7,11 @@ public class MyMessage implements MultiItemEntity {
     public static final int COMMENT = 2;
     public static final int LIKE = 3;
 
-    String message="这是一条消息";
+    String message = "这是一条消息";
     String sender = "ici";
-    int imageId=R.drawable.list_image;
+    int imageId = R.drawable.list_image;
 
-    private int itemType=1;
+    private int itemType = 1;
 
     @Override
     public int getItemType() {
@@ -19,7 +19,7 @@ public class MyMessage implements MultiItemEntity {
     }
 
     public MyMessage(int itemType) {
-        this.itemType=itemType;
+        this.itemType = itemType;
     }
 
     public MyMessage() {

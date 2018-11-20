@@ -3,6 +3,7 @@ package com.example.messagetest;
 
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+
 import java.util.List;
 
 public class MyMessageAdapter extends BaseMultiItemQuickAdapter<MyMessage, BaseViewHolder> {
@@ -29,7 +30,4 @@ public class MyMessageAdapter extends BaseMultiItemQuickAdapter<MyMessage, BaseV
                 break;
         }
     }
-
-
-
 }
