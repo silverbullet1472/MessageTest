@@ -9,7 +9,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -24,7 +23,7 @@ public class MessageFragment extends Fragment {
 
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private RecyclerView mRecyclerView;
-    private MyListAdapter mAdapter;
+    private MyMessageAdapter mAdapter;
     private List<MyMessage> messages;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -47,7 +46,7 @@ public class MessageFragment extends Fragment {
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(layoutManager);
 
-        mAdapter = new MyListAdapter(messages);
+        mAdapter = new MyMessageAdapter(messages);
         mAdapter.openLoadAnimation(1);
         mAdapter.isFirstOnly(false);
         mAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
@@ -57,11 +56,13 @@ public class MessageFragment extends Fragment {
                 MyMessage message = messages.get(position);
                 switch (message.getItemType()){
                     case 1:
+                        DotLayout dotLayout1 = (DotLayout)mAdapter.getViewByPosition(mRecyclerView,position,R.id.dot_layout);
+                        dotLayout1.show(true,0);
                         Toast.makeText(getActivity(),"ici官方消息",Toast.LENGTH_SHORT).show();
                         break;
                     case 2:
                         DotLayout dotLayout2 = (DotLayout)mAdapter.getViewByPosition(mRecyclerView,position,R.id.dot_layout);
-                        dotLayout2.show(true,5);
+                        dotLayout2.show(true,105);
                         Toast.makeText(getActivity(),"评论信息"+position,Toast.LENGTH_SHORT).show();
                         break;
                     case 3:

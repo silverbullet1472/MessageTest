@@ -5,8 +5,8 @@ import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import java.util.List;
 
-public class MyListAdapter extends BaseMultiItemQuickAdapter<MyMessage, BaseViewHolder> {
-    public MyListAdapter(List data) {
+public class MyMessageAdapter extends BaseMultiItemQuickAdapter<MyMessage, BaseViewHolder> {
+    public MyMessageAdapter(List data) {
         super(data);
         addItemType(MyMessage.ICI, R.layout.item_simple);
         addItemType(MyMessage.COMMENT, R.layout.item_comment_btn);

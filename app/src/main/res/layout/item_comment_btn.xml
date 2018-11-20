@@ -42,7 +42,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            app:dotOverPadding="3dp">
+            app:dotOverPadding="5dp"
+            app:dotPadding="3dp">
 
         <ImageView
             android:id="@+id/img_more"
